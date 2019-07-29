@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+
+  mysql57:
+    image: mysql:5.7.27
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "test"
+    ports:
+      - "3306:3306"
+
+  postgres11:
+    image: postgres:11.4
+    environment:
+      POSTGRES_DB: "test"
+    ports:
+      - "5432:5432"
